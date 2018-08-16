@@ -1,0 +1,4 @@
+/* This file should be linted by stylelint. */
+.should .lint .this {
+  color: red;
+}

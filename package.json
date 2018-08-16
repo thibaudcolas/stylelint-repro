@@ -1,0 +1,36 @@
+{
+  "name": "stylelint-repro-2833",
+  "version": "1.0.0",
+  "description": "Reproduction for stylelint issue #2833",
+  "author": "Thibaud Colas",
+  "license": "MIT",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thibaudcolas/stylelint-repro-2833.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thibaudcolas/stylelint-repro-2833/issues"
+  },
+  "homepage": "https://thibaudcolas.github.io/stylelint-repro-2833/",
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": false,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "proseWrap": "preserve"
+  },
+  "devDependencies": {
+    "stylelint": "^9.4.0"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "scripts": {
+    "stylelint:cli": "stylelint src/**/*",
+    "stylelint:api": "./src/api/index.js"
+  }
+}
