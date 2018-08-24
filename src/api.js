@@ -12,4 +12,4 @@ stylelint.lint({
   code: fileContent,
   codeFilename: filePath,
   formatter: "string",
-}).then(res => console.log(res.output));
+}).then(res => console.log(res));

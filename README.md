@@ -47,18 +47,37 @@ From the project root, success, ignore patterns are applied:
 # (no output)
 ```
 
-From `src/public`, fail, ignore patterns are not applied:
+From `src/public`, success, ignore patterns are not applied:
 
 ```sh
 cd src/public
 ../api.js index.html
-# index.html
-# 3:3  ✖  Expected ".should .not .lint .this" to have no more than 2 classes   selector-max-class
+{ errored: true,
+  output: '\n\u001b[4mindex.html\u001b[24m\n \u001b[2m3:3\u001b[22m  \u001b[31m\u001b[31m✖\u001b[31m\u001b[39m  Expected ".should .not .lint .this" to have no more than 2   \u001b[2mselector-max-class\u001b[22m\n         classes\n\n',
+  results:
+   [ { source: '/Users/thibaudcolas/Dev/thibaudcolas/stylelint-repro-2833/src/public/index.html',
+       deprecations: [],
+       invalidOptionWarnings: [],
+       parseErrors: [],
+       errored: true,
+       warnings: [Array],
+       ignored: undefined,
+       _postcssResult: [Object] } ] }
 ```
 
-With `ignorePath`, from `src/public`, success, ignore patterns are applied:
+With `ignorePath`, from `src/public`, fail, output is empty but other results show errors:
 
 ```sh
 ../api.ignorePath.js index.html
-# (no output)
+{ errored: true,
+  output: '',
+  results:
+   [ { source: '/Users/thibaudcolas/Dev/thibaudcolas/stylelint-repro-2833/src/public/index.html',
+       deprecations: [],
+       invalidOptionWarnings: [],
+       parseErrors: [],
+       errored: true,
+       warnings: [Array],
+       ignored: undefined,
+       _postcssResult: [Object] } ] }
 ```

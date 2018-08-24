@@ -13,4 +13,4 @@ stylelint.lint({
   codeFilename: filePath,
   formatter: "string",
   ignorePath: path.join(__dirname, '..', '.stylelintignore'),
-}).then(res => console.log(res.output));
+}).then(res => console.log(res));
